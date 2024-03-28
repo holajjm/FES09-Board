@@ -106,7 +106,7 @@ function BoardList(){
             { itemList }
           </tbody>
         </table>
-            <Pagination totalPage={data?.pagination.totalPages} current={data?.pagination.page} />
+            <Pagination totalPage={data?.pagination.totalPage} current={data?.pagination.page} />
         <hr/>
         
       </section>
