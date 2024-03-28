@@ -28,7 +28,7 @@ function BoardList(){
   
   const { data, isLoading, error,refetch } = useQuery({
     queryKey: ['posts'],
-    queryFn: () => axios.get('/posts',{params: {page: searchParams.get('page'), limit: 10, keyword: searchParams.get('keyword')}}),
+    queryFn: () => axios.get('/posts',{params: {page: searchParams.get('page'), limit: import.meta.env.VITE_POST_LIMIT, keyword: searchParams.get('keyword')}}),
     select: response => response.data, // queryFn을 통해 받은 데이터 받기
     // staleTime: 1000*10 //query 실행 후 캐시가 유지되는 시간(default === 0)
     suspense: true,

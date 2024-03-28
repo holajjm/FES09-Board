@@ -1,5 +1,6 @@
 // route를 통해 경로 설정
 import Layout from '@components/Layout/Layout';
+import EnvCheck from '@pages/EnvCheck';
 import BoardDetail from '@pages/board/BoardDetail';
 import BoardList from '@pages/board/BoardList';
 import BoardNew from '@pages/board/BoardNew';
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: "users/signup",
         element: <Signup />
+      },
+      {
+        path: "envcheck",
+        element: <EnvCheck />
       }
     ]
   },
